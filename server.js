@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 
 const PORT = process.env.PORT || 3000;
 
-const db = require("./seeders");
+const db = require("./models");
 
 const app = express();
 
@@ -15,7 +15,18 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
+  useNewUrlParser: true,
+});
+// app.get("/workouts", (req, res) => {
+//     db.Note.find({})
+//       .then(dbNote => {
+//         res.json(dbNote);
+//       })
+//       .catch(err => {
+//         res.json(err);
+//       });
+//   });
 
 // db.User.create({ name: "" })
 //   .then(dbUser => {
