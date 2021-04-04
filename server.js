@@ -18,66 +18,11 @@ app.use(express.static("public"));
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
   useNewUrlParser: true,
 });
-// app.get("/workouts", (req, res) => {
-//     db.Note.find({})
-//       .then(dbNote => {
-//         res.json(dbNote);
-//       })
-//       .catch(err => {
-//         res.json(err);
-//       });
-//   });
 
-// db.User.create({ name: "" })
-//   .then(dbUser => {
-//     console.log(dbUser);
-//   })
-//   .catch(({ message }) => {
-//     console.log(message);
-//   });
-
-// app.get("/", (req, res) => {
-//   db.Note.find({})
-//     .then(dbNote => {
-//       res.json(dbNote);
-//     })
-//     .catch(err => {
-//       res.json(err);
-//     });
-// });
-
-// app.get("/user", (req, res) => {
-//   db.User.find({})
-//     .then(dbUser => {
-//       res.json(dbUser);
-//     })
-//     .catch(err => {
-//       res.json(err);
-//     });
-// });
-
-// app.post("/submit", ({ body }, res) => {
-//   db.Note.create(body)
-//     .then(({ _id }) => db.User.findOneAndUpdate({}, { $push: { notes: _id } }, { new: true }))
-//     .then(dbUser => {
-//       res.json(dbUser);
-//     })
-//     .catch(err => {
-//       res.json(err);
-//     });
-// });
-
-// app.get("/populateduser", (req, res) => {
-//   db.User.find({})
-//     .populate("notes")
-//     .then(dbUser => {
-//       res.json(dbUser);
-//     })
-//     .catch(err => {
-//       res.json(err);
-//     });
-// });
+app.use("./routes/apiRoutes.js");
+app.use("./routes/htmlRoutes.js");
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
 });
+
