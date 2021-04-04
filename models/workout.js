@@ -1,13 +1,51 @@
 const mongoose = require("mongoose");
 
-// const Schema = mongoose.Schema;
-
-// const UserSchema = new Schema({
-//   username: {
-//     type: String,
-//     trim: true,
-//     required: "Username is Required"
-//   },
+const Schema = mongoose.Schema;
+//look at seed.js eg date/exercises(array.)
+const workoutSchema = new Schema({
+  day: {
+    type: Date,
+    default: Date.now(),
+  },
+  exercises: [
+    {
+      type: {
+        type: String,
+        trim: true,
+        required: "Enter exercise type",
+      },
+      name: {
+        type: String,
+        trim: true,
+        required: "Enter exercise name",
+      },
+      duration: {
+        type: Number,
+        required: "Enter Exercise Duration",
+        min: [0, "Cannot be negative or zero"],
+      },
+      weight: {
+        type: Number,
+        min: [0, "Cannot be negative or zero"],
+      },
+      reps: {
+        type: Number,
+        min: [0, "Cannot be negative or zero"],
+      },
+      sets: {
+        type: Number,
+        min: [0, "Cannot be negative or zero"],
+      },
+      distance: {
+        type: Number,
+        min: [0, "Cannot be negative or zero"],
+      },
+      //second validation ,do no accept negative numbers
+    },
+  ],
+  //weight , reps, sets, duration
+  //distance not required
+});
 
 //   password: {
 //     type: String,
@@ -28,6 +66,7 @@ const mongoose = require("mongoose");
 //   }
 // });
 
-// const User = mongoose.model("User", UserSchema);
+const Workout = mongoose.model("Workout", workoutSchema);
 
-// module.exports = User;
+module.exports = Workout;
+//const workoutSchema = new Schema({
