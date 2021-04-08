@@ -44,7 +44,9 @@ The user should be able to:
 
 ## Screenshots
 
-![Example screenshot](https://raw.githubusercontent.com/FraserClarke/Workout-Tracker/main/public/assets/img/screenshot.png)
+![Example screenshot](https://raw.githubusercontent.com/FraserClarke/Workout-Tracker/main/public/img/index.PNG)
+![Example screenshot](https://raw.githubusercontent.com/FraserClarke/Workout-Tracker/main/public/img/exercise.PNG)
+![Example screenshot](https://raw.githubusercontent.com/FraserClarke/Workout-Tracker/main/public/img/stats.PNG)
 
 ## Links
 
