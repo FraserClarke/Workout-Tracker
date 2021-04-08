@@ -9,7 +9,7 @@ The application has been deployed using Heroku and MongoDB Atlas.
 
 As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
 
-- [Deployed Heroku Link]()
+- [Deployed Heroku Link](https://infinite-ravine-39733.herokuapp.com/?id=606f126093595b00158a5be0)
 
 ## Table of contents
 
@@ -50,7 +50,7 @@ The user should be able to:
 
 - [Github Repository](https://github.com/FraserClarke/Workout-Tracker)
 
-- [Deployed Heroku Link]()
+- [Deployed Heroku Link](https://infinite-ravine-39733.herokuapp.com/?id=606f126093595b00158a5be0)
 
 ## Credits
 
