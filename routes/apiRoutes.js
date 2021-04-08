@@ -77,8 +77,8 @@ router.put("/workouts/:id", (req, res) => {
 // CREATE WORKOUT
 //router.post("/workouts", (req, res) => res.json(data));
 
-router.post("/workouts", (req, res) => {
-  Workout.create({ body })
+router.post("/workouts", ({ body }, res) => {
+  Workout.create(body)
     .then((workout) => {
       res.json(workout);
     })
